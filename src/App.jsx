@@ -6,6 +6,7 @@ import "./app.scss";
 
 import axios from "axios";
 import ContainerListPokemon from "./Components/ContainerListPokemon";
+import ContainerApp from "./Components/ContainerApp";
 
 const App = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -34,11 +35,13 @@ const App = () => {
 
   return (
     <main>
-      <ContainerListPokemon>
-        {pokemonList.map((pokemon) => (
-          <CardPokemon key={pokemon.id} pokemon={pokemon} />
-        ))}
-      </ContainerListPokemon>
+      <ContainerApp>
+        <ContainerListPokemon>
+          {pokemonList.map((pokemon) => (
+            <CardPokemon key={pokemon.id} pokemon={pokemon} />
+          ))}
+        </ContainerListPokemon>
+      </ContainerApp>
     </main>
   );
 };
