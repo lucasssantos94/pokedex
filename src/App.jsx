@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ScrollToTop from "react-scroll-to-top";
 
 import CardPokemon from "./Components/CardPokemon";
 
@@ -50,6 +51,7 @@ const App = () => {
         </ContainerListPokemon>
 
         <ButtonShowMore func={loadMorePokemons} />
+        <ScrollToTop smooth />
       </ContainerApp>
     </main>
   );
