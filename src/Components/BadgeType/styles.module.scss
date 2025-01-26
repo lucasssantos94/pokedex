@@ -1,0 +1,15 @@
+.badgeType {
+
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+
+    span {
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+}

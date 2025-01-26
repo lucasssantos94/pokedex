@@ -1,0 +1,9 @@
+main {
+    padding-top: 10rem;
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
