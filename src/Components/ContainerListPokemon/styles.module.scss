@@ -1,0 +1,4 @@
+.container_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(38.4rem, 1fr));
+}

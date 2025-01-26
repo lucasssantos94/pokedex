@@ -5,6 +5,7 @@ import CardPokemon from "./Components/CardPokemon";
 import "./app.scss";
 
 import axios from "axios";
+import ContainerListPokemon from "./Components/ContainerListPokemon";
 
 const App = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -12,7 +13,7 @@ const App = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://pokeapi.co/api/v2/pokemon?limit=200",
+        "https://pokeapi.co/api/v2/pokemon?limit=9",
       );
       const results = response.data.results;
 
@@ -33,11 +34,11 @@ const App = () => {
 
   return (
     <main>
-      <div>
+      <ContainerListPokemon>
         {pokemonList.map((pokemon) => (
           <CardPokemon key={pokemon.id} pokemon={pokemon} />
         ))}
-      </div>
+      </ContainerListPokemon>
     </main>
   );
 };
