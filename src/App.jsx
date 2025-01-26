@@ -7,6 +7,7 @@ import "./app.scss";
 import axios from "axios";
 import ContainerListPokemon from "./Components/ContainerListPokemon";
 import ContainerApp from "./Components/ContainerApp";
+import ButtonShowMore from "./Components/ButtonShowMore";
 
 const App = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -41,6 +42,8 @@ const App = () => {
             <CardPokemon key={pokemon.id} pokemon={pokemon} />
           ))}
         </ContainerListPokemon>
+
+        <ButtonShowMore />
       </ContainerApp>
     </main>
   );
