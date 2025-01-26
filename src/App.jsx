@@ -10,12 +10,18 @@ import ContainerApp from "./Components/ContainerApp";
 import ButtonShowMore from "./Components/ButtonShowMore";
 
 const App = () => {
+  const [numberOfPokemons, setNumberOfPokemons] = useState(9);
   const [pokemonList, setPokemonList] = useState([]);
 
-  const getData = async () => {
+  const loadMorePokemons = () => {
+    setNumberOfPokemons(numberOfPokemons + 9);
+    console.log(numberOfPokemons);
+  };
+
+  const getData = async (number) => {
     try {
       const response = await axios.get(
-        "https://pokeapi.co/api/v2/pokemon?limit=9",
+        `https://pokeapi.co/api/v2/pokemon?limit=${number}`,
       );
       const results = response.data.results;
 
@@ -31,8 +37,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    getData();
-  }, []);
+    getData(numberOfPokemons);
+  }, [numberOfPokemons]);
 
   return (
     <main>
@@ -43,7 +49,7 @@ const App = () => {
           ))}
         </ContainerListPokemon>
 
-        <ButtonShowMore />
+        <ButtonShowMore func={loadMorePokemons} />
       </ContainerApp>
     </main>
   );
