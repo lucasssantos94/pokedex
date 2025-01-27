@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import iconClose from "../../assets/icon-close.svg";
 import pokeballDiveser from "../../assets/pokeball-diviser.svg";
-// import types from "../../assets/utils/types";
 
 import iconWeight from "../../assets/icon-weight.svg";
 import iconHeight from "../../assets/icon-ruler.svg";
@@ -11,6 +11,28 @@ import styles from "./styles.module.scss";
 import BadgeType from "../BadgeType";
 
 const ModalStats = ({ modal, selectedPokemon }) => {
+  const [progressValues, setProgressValues] = useState([]);
+
+  useEffect(() => {
+    if (selectedPokemon) {
+      const statsArray = selectedPokemon.stats.map(() => 0); // Inicializa os valores como 0
+      setProgressValues(statsArray);
+
+      // Animação gradual dos valores de progresso
+      const interval = setInterval(() => {
+        setProgressValues((prev) =>
+          prev.map((value, index) => {
+            const target = selectedPokemon.stats[index].base_stat;
+            return value < target ? value + 1 : value;
+          }),
+        );
+      }, 1); // Velocidade de animação
+
+      // Limpar o intervalo quando o componente for desmontado
+      return () => clearInterval(interval);
+    }
+  }, [selectedPokemon]);
+
   return (
     <div className={styles.modal} onClick={() => modal(false)}>
       <div className={styles.container_modal}>
@@ -79,7 +101,7 @@ const ModalStats = ({ modal, selectedPokemon }) => {
                     <td>{stats.stat.name}</td>
                     <td>{stats.base_stat}</td>
                     <td>
-                      <progress value={stats.base_stat} max="100" />
+                      <progress value={progressValues[index]} max="100" />
                     </td>
                   </tr>
                 ))}
