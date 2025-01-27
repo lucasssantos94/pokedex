@@ -11,6 +11,10 @@ body {
     background-color: #060B28;
 }
 
+body:has(.modal) {
+    overflow-y: hidden;
+}
+
 html {
     font-size: 62.5%;
 }

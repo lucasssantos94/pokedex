@@ -9,7 +9,11 @@ import iconWeight from "../../assets/icon-weight.svg";
 import iconHeight from "../../assets/icon-ruler.svg";
 import iconBolt from "../../assets/icon-bolt.svg";
 
-const CardPokemon = ({ pokemon }) => {
+const CardPokemon = ({ pokemon, modal, selectedPokemon }) => {
+  const handleClick = () => {
+    selectedPokemon(pokemon);
+    modal(true);
+  };
   return (
     <article key={pokemon.id} className={styles.card_pokemon}>
       <img
@@ -62,6 +66,7 @@ const CardPokemon = ({ pokemon }) => {
           backgroundColor: types[pokemon.types[0].type.name]?.color,
         }}
         className={styles.btn_details}
+        onClick={() => handleClick()}
       >
         <img src={iconBolt} alt="icon bolt" />
         Mais Detalhes
@@ -72,6 +77,8 @@ const CardPokemon = ({ pokemon }) => {
 
 CardPokemon.propTypes = {
   pokemon: PropTypes.object.isRequired,
+  modal: PropTypes.func.isRequired,
+  selectedPokemon: PropTypes.func.isRequired,
 };
 
 export default CardPokemon;

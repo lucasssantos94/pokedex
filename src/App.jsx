@@ -9,10 +9,13 @@ import axios from "axios";
 import ContainerListPokemon from "./Components/ContainerListPokemon";
 import ContainerApp from "./Components/ContainerApp";
 import ButtonShowMore from "./Components/ButtonShowMore";
+import ModalStats from "./Components/ModalStats";
 
 const App = () => {
   const [numberOfPokemons, setNumberOfPokemons] = useState(9);
   const [pokemonList, setPokemonList] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [selectedPokemon, setSelectedPokemon] = useState();
 
   const loadMorePokemons = () => {
     setNumberOfPokemons(numberOfPokemons + 9);
@@ -46,13 +49,21 @@ const App = () => {
       <ContainerApp>
         <ContainerListPokemon>
           {pokemonList.map((pokemon) => (
-            <CardPokemon key={pokemon.id} pokemon={pokemon} />
+            <CardPokemon
+              key={pokemon.id}
+              pokemon={pokemon}
+              modal={setModal}
+              selectedPokemon={setSelectedPokemon}
+            />
           ))}
         </ContainerListPokemon>
 
         <ButtonShowMore func={loadMorePokemons} />
         <ScrollToTop smooth />
       </ContainerApp>
+      {modal && (
+        <ModalStats modal={setModal} selectedPokemon={selectedPokemon} />
+      )}
     </main>
   );
 };
