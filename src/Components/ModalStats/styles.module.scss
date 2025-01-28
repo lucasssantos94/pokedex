@@ -156,6 +156,18 @@
                 background-color: #555555;
                 overflow: hidden;
 
+                &.low::-webkit-progress-value {
+                    background-color: red;
+                }
+
+                &.medium::-webkit-progress-value {
+                    background-color: orange;
+                }
+
+                &.high::-webkit-progress-value {
+                    background-color: green;
+                }
+
             }
 
             progress::-webkit-progress-bar {
@@ -164,13 +176,12 @@
             }
 
             progress::-webkit-progress-value {
-                background-color: #1CD80E;
                 border-radius: 10px;
                 transition: width 0.3s ease-in-out;
             }
 
             progress::-moz-progress-bar {
-                background-color: #1CD80E;
+
                 border-radius: 10px;
             }
 

@@ -42,6 +42,12 @@ const ModalStats = ({ modal, selectedPokemon }) => {
     }, 300); // O tempo deve coincidir com o `duration` da animação
   };
 
+  const getProgressColor = (value) => {
+    if (value < 50) return "low"; // Vermelho
+    if (value <= 70) return "medium"; // Laranja
+    return "high"; // Verde
+  };
+
   return (
     <AnimatePresence>
       {selectedPokemon && !isExiting && (
@@ -126,7 +132,11 @@ const ModalStats = ({ modal, selectedPokemon }) => {
                         <td>{stats.stat.name}</td>
                         <td>{stats.base_stat}</td>
                         <td>
-                          <progress value={progressValues[index]} max="100" />
+                          <progress
+                            value={progressValues[index]}
+                            max="100"
+                            className={`${styles.progress} ${styles[getProgressColor(progressValues[index])]}`}
+                          />
                         </td>
                       </tr>
                     ))}
