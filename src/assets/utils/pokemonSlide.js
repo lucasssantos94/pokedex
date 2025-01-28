@@ -2,6 +2,10 @@ import charizard from "./../charizard.webp";
 import pikachu from "./../pikachu.webp";
 import bulbasaur from "./../bulbasaur.webp";
 import squirtle from "./../squirtle.webp";
+import typeFire from "./../typesIcon/fire.svg";
+import typeEletric from "./../typesIcon/electric.svg";
+import typeGrass from "./../typesIcon/grass.svg";
+import typeWater from "./../typesIcon/water.svg";
 
 const pokemons = [
   {
@@ -13,6 +17,7 @@ const pokemons = [
       "linear-gradient(to right, #ee8328, #eb7521, #e8661c, #e55519, #e14318)",
     image: charizard,
     types: ["fire", "flying"],
+    iconType: typeFire,
   },
   {
     id: 25,
@@ -23,6 +28,7 @@ const pokemons = [
       "linear-gradient(to right, #f9d649, #f9cc33, #f8c11e, #f7b507, #f6a700)",
     image: pikachu,
     types: ["electric"],
+    iconType: typeEletric,
   },
   {
     id: 1,
@@ -33,6 +39,7 @@ const pokemons = [
       "linear-gradient(to right, #78c850, #66b440, #55a030, #449020, #388518)",
     image: bulbasaur,
     types: ["grass", "poison"],
+    iconType: typeGrass,
   },
   {
     id: 7,
@@ -43,6 +50,7 @@ const pokemons = [
       "linear-gradient(to right, #6890f0, #5a82e0, #4b75d0, #3e67c0, #335bb0)",
     image: squirtle,
     types: ["water"],
+    iconType: typeWater,
   },
 ];
 

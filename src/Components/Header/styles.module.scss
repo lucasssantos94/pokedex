@@ -1,5 +1,5 @@
 .header {
-    height: 80rem;
+    height: 80.4rem;
     background: rgb(238, 131, 40);
     // background-image: linear-gradient(to right, #ee8328, #eb7521, #e8661c, #e55519, #e14318);
     position: relative;
@@ -47,6 +47,10 @@
         top: 50%;
         left: 45%;
         transform: translate(-50%, -50%);
+
+        img {
+            width: 5.6rem;
+        }
 
         &::before,
         &::after {

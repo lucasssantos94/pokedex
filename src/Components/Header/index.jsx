@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import dividerFire from "../../assets/divider-fire.svg";
 import bgPokeball from "../../assets/background-pokeball.svg";
 import ContainerApp from "../ContainerApp";
 import pokemons from "../../assets/utils/pokemonSlide";
@@ -65,7 +64,17 @@ const Header = () => {
           </AnimatePresence>
 
           <div className={styles.divider}>
-            <img src={dividerFire} alt="divider fire" />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={pokemonSlide.id}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.4, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                src={pokemonSlide.iconType}
+                alt="icon type"
+              ></motion.img>
+            </AnimatePresence>
           </div>
         </section>
 
