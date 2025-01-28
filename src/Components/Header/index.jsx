@@ -6,6 +6,7 @@ import ContainerApp from "../ContainerApp";
 import pokemons from "../../assets/utils/pokemonSlide";
 
 import styles from "./styles.module.scss";
+import BadgeType from "../BadgeType";
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,6 +48,13 @@ const Header = () => {
                   ? `#00${pokemonSlide.id}`
                   : `#${pokemonSlide.id}`}
               </h3>
+
+              <div className={styles.types_pokemon}>
+                {pokemonSlide.types.map((type, index) => (
+                  <BadgeType key={index} type={type} />
+                ))}
+              </div>
+
               <h1 className={styles.name_pokemon}>{pokemonSlide.name}</h1>
               <p className={styles.description_pokemon}>
                 {pokemonSlide.description}
