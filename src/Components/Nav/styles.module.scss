@@ -1,0 +1,11 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .social_media {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+}

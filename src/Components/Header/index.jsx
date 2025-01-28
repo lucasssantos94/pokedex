@@ -4,6 +4,7 @@ import dividerFire from "../../assets/divider-fire.svg";
 import bgPokeball from "../../assets/background-pokeball.svg";
 import ContainerApp from "../ContainerApp";
 import pokemons from "../../assets/utils/pokemonSlide";
+import Nav from "../Nav";
 
 import styles from "./styles.module.scss";
 import BadgeType from "../BadgeType";
@@ -33,6 +34,7 @@ const Header = () => {
         className={`${styles.pokeball_left} ${styles.pokeball}`}
       />
       <ContainerApp>
+        <Nav />
         <section className={styles.container_header}>
           <AnimatePresence mode="wait">
             <motion.div
