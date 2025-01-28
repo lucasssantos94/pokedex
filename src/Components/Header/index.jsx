@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(changeSlide, 10000); // Troca a cada 10 segundos
+    const interval = setInterval(changeSlide, 15000); // Troca a cada 10 segundos
     return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
   }, []);
 
