@@ -10,6 +10,7 @@ import ContainerListPokemon from "./Components/ContainerListPokemon";
 import ContainerApp from "./Components/ContainerApp";
 import ButtonShowMore from "./Components/ButtonShowMore";
 import ModalStats from "./Components/ModalStats";
+import Header from "./Components/Header";
 
 const App = () => {
   const [numberOfPokemons, setNumberOfPokemons] = useState(9);
@@ -19,7 +20,6 @@ const App = () => {
 
   const loadMorePokemons = () => {
     setNumberOfPokemons(numberOfPokemons + 9);
-    console.log(numberOfPokemons);
   };
 
   const getData = async (number) => {
@@ -45,26 +45,29 @@ const App = () => {
   }, [numberOfPokemons]);
 
   return (
-    <main>
-      <ContainerApp>
-        <ContainerListPokemon>
-          {pokemonList.map((pokemon) => (
-            <CardPokemon
-              key={pokemon.id}
-              pokemon={pokemon}
-              modal={setModal}
-              selectedPokemon={setSelectedPokemon}
-            />
-          ))}
-        </ContainerListPokemon>
+    <>
+      <Header />
+      <main>
+        <ContainerApp>
+          <ContainerListPokemon>
+            {pokemonList.map((pokemon) => (
+              <CardPokemon
+                key={pokemon.id}
+                pokemon={pokemon}
+                modal={setModal}
+                selectedPokemon={setSelectedPokemon}
+              />
+            ))}
+          </ContainerListPokemon>
 
-        <ButtonShowMore func={loadMorePokemons} />
-        <ScrollToTop smooth />
-      </ContainerApp>
-      {modal && (
-        <ModalStats modal={setModal} selectedPokemon={selectedPokemon} />
-      )}
-    </main>
+          <ButtonShowMore func={loadMorePokemons} />
+          <ScrollToTop smooth />
+        </ContainerApp>
+        {modal && (
+          <ModalStats modal={setModal} selectedPokemon={selectedPokemon} />
+        )}
+      </main>
+    </>
   );
 };
 
