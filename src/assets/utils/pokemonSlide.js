@@ -1,7 +1,7 @@
-import charizard from "./../charizard.png";
-import pikachu from "./../pikachu.png";
-import bulbasaur from "./../bulbasaur.png";
-import squirtle from "./../squirtle.png";
+import charizard from "./../charizard.webp";
+import pikachu from "./../pikachu.webp";
+import bulbasaur from "./../bulbasaur.webp";
+import squirtle from "./../squirtle.webp";
 
 const pokemons = [
   {
