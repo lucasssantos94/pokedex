@@ -1,5 +1,6 @@
 .header {
     height: 80.4rem;
+
     position: relative;
 
     .pokeball {
@@ -34,7 +35,8 @@
         }
 
         .types_pokemon {
-            @include global.flex($align: center, $gap: 0.8rem);
+            display: flex;
+            gap: 0.8rem;
             margin: 2.4rem 0;
         }
     }

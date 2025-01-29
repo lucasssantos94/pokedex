@@ -1,5 +1,13 @@
 .container_list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-    gap: 3.2rem;
+    gap: 18rem 3.2rem;
+
+    @include global.media_query('lg') {
+        grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    }
+
+    @include global.media_query('sm') {
+        grid-template-columns: auto;
+    }
 }

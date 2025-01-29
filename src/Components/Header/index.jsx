@@ -76,22 +76,21 @@ const Header = () => {
               ></motion.img>
             </AnimatePresence>
           </div>
-        </section>
 
-        <div className={styles.image_pokemon}>
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={pokemonSlide.id}
-              src={pokemonSlide.image}
-              alt={pokemonSlide.name}
-              className={styles.img_pokemon}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.5 }}
-            />
-          </AnimatePresence>
-        </div>
+          <div className={styles.image_pokemon}>
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={pokemonSlide.id}
+                src={pokemonSlide.image}
+                alt={pokemonSlide.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+          </div>
+        </section>
       </ContainerApp>
     </header>
   );
