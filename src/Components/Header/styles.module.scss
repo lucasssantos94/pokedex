@@ -131,7 +131,8 @@
         }
 
         @include global.media_query('sm') {
-            height: 82rem;
+            height: auto;
+            gap: 4rem;
 
             .divider {
 
