@@ -1,0 +1,7 @@
+.navigation {
+    @include global.flex($justify: space-between, $align: center);
+    margin-bottom: 15rem;
+    // background-color: blue;
+
+
+}

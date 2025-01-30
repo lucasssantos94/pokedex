@@ -1,0 +1,39 @@
+.slick-slider {
+    width: 40%;
+
+}
+
+.slick-track {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.slick-slide {
+    cursor: pointer;
+}
+
+.slick-next,
+.slick-prev {
+
+    top: 30%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-size: contain;
+}
+
+.slick-prev:before {
+    background: url(../../assets/icon-arrow-left.svg) no-repeat center center;
+}
+
+.slick-next:before {
+    content: "";
+    background: url(../../assets/icon-arrow-right.svg) no-repeat center center;
+}

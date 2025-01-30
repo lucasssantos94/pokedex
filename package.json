@@ -17,7 +17,9 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scroll-to-top": "^3.0.0"
+    "react-scroll-to-top": "^3.0.0",
+    "react-slick": "^0.30.3",
+    "swiper": "^11.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
