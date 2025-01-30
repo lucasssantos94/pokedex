@@ -83,14 +83,14 @@ const ModalStats = ({ modal, selectedPokemon }) => {
                     className={styles.image_pokemon}
                   />
                   <div className={styles.container_info}>
-                    <p>
+                    <h3>
                       #
                       {selectedPokemon.id < 10
                         ? `00${selectedPokemon.id}`
                         : selectedPokemon.id < 100
                           ? `0${selectedPokemon.id}`
                           : selectedPokemon.id}
-                    </p>
+                    </h3>
                     <h2>{selectedPokemon.name}</h2>
 
                     <div className={styles.types_pokemon}>
