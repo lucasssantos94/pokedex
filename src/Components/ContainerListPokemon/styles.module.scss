@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
     gap: 18rem 3.2rem;
+    padding-top: 16.4rem;
 
     @include global.media_query('lg') {
         grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));

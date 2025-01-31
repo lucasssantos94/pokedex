@@ -12,7 +12,6 @@ import ButtonShowMore from "./Components/ButtonShowMore";
 import ModalStats from "./Components/ModalStats";
 import Header from "./Components/Header";
 import Navigation from "./Components/Navigation";
-import SlideTypes from "./Components/SlideTypes";
 
 const App = () => {
   const [numberOfPokemons, setNumberOfPokemons] = useState(9);
@@ -51,8 +50,7 @@ const App = () => {
       <Header />
       <main>
         <ContainerApp>
-          {/* <Navigation /> */}
-          <SlideTypes />
+          <Navigation />
           <ContainerListPokemon>
             {pokemonList.map((pokemon) => (
               <CardPokemon

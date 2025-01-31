@@ -5,10 +5,10 @@ import BadgeType from "../BadgeType";
 import styles from "./styles.module.scss";
 import "./customSlide.scss";
 
-export default function SimpleSlider() {
+const SlideTypes = () => {
   const typesPokemons = Object.values(types);
 
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -30,4 +30,6 @@ export default function SimpleSlider() {
       </Slider>
     </>
   );
-}
+};
+
+export default SlideTypes;
