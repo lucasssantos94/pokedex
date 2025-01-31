@@ -1,5 +1,5 @@
 .badgeType {
-
+    width: auto;
     padding: 0.4rem 0.8rem;
     border-radius: 0.8rem;
     @include global.flex($justify: center, $align: center, $gap: 0.4rem);

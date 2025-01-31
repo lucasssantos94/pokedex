@@ -1,6 +1,13 @@
 .slick-slider {
     width: 40%;
 
+    @media screen and (max-width: 1200px) {
+        width: 46%;
+    }
+
+    @media screen and (max-width: 992px) {
+        width: 100%;
+    }
 }
 
 .slick-track {
@@ -12,7 +19,16 @@
 
 .slick-slide {
     cursor: pointer;
+
+    @include global.media_query('992px') {
+        width: 100% !important;
+    }
 }
+
+// @include global.media_query('lg') {
+//     width: auto !important;
+// }
+
 
 .slick-next,
 .slick-prev {

@@ -1,7 +1,7 @@
 .header {
     padding-bottom: 8rem;
     position: relative;
-    // height: auto;
+    height: auto;
 
     .pokeball {
         position: absolute;
@@ -97,7 +97,7 @@
 
         .image_pokemon {
             img {
-                width: 48.8rem
+                width: 48.8rem;
             }
         }
 
@@ -152,6 +152,8 @@
     }
 
     @include global.media_query('sm') {
+        height: 104rem;
+
         .pokeball {
             display: none;
         }

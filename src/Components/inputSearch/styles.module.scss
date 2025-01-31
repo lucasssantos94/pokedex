@@ -1,12 +1,20 @@
 .input_search {
-    width: 25vw;
+    width: 36vw;
     position: absolute;
     top: 3.5rem;
     right: -2rem;
-    @include global.flex($align: center, $justify: space-between);
+    @include global.flex($align: center);
+    flex-wrap: nowrap;
+
+    @include global.media_query('lg') {
+        width: 100%;
+        position: static;
+        margin-bottom: 2.4rem;
+    }
 
     input {
-        width: 86%;
+        min-width: 82%;
+        max-width: 86%;
         height: 5.6rem;
         border-radius: 0.8rem;
         border: 2px solid #2F5AFF;
@@ -17,6 +25,10 @@
         color: #fff;
         font-size: 1.6rem;
 
+        @include global.media_query('lg') {
+            min-width: 88%;
+        }
+
     }
 
     button {
@@ -25,10 +37,11 @@
         @include global.flex($align: center, $justify: center);
         background: #2F5AFF;
         position: relative;
-        left: -2rem;
+        left: -1rem;
         border-radius: 0 0.8rem 0.8rem 0;
         border: 0;
         cursor: pointer;
         z-index: 1000;
     }
+
 }

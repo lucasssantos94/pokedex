@@ -1,7 +1,10 @@
 .navigation {
     position: relative;
     height: 15.2rem;
-    // background-color: red;
-    // padding-bottom: 3.5rem;
     border-bottom: 1px solid #24293F;
+
+    @include global.media_query('lg') {
+        position: static;
+        height: auto;
+    }
 }

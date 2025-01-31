@@ -14,7 +14,16 @@ const SlideTypes = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+        },
+      },
+    ],
   };
   return (
     <>

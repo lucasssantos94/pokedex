@@ -1,5 +1,9 @@
 .slider {
     margin-bottom: 15rem;
+
+    @include global.media_query('lg') {
+        margin-bottom: 2.4rem;
+    }
 }
 
 .title {
