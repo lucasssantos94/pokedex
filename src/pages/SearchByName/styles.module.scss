@@ -2,4 +2,12 @@
     margin-top: 15rem;
     width: 30vw;
     margin: 15rem auto 0 auto;
+
+    @include global.media_query('lg') {
+        width: 80%;
+    }
+
+    @include global.media_query('sm') {
+        width: 100%;
+    }
 }
