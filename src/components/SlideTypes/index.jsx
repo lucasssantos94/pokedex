@@ -1,7 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 import Slider from "react-slick";
 import types from "../../assets/utils/types";
 import BadgeType from "../BadgeType";
-import { NavLink } from "react-router-dom";
+
+import iconHome from "@assets/icon-home.svg";
 
 import styles from "./styles.module.scss";
 import "./customSlide.scss";
@@ -28,6 +31,11 @@ const SlideTypes = () => {
   };
   return (
     <>
+      <NavLink to={"/"} className={styles.link_home}>
+        <img src={iconHome} alt="icone home" />
+        <span>Home</span>
+      </NavLink>
+
       <h2 className={styles.title}>Pesquisar por tipos</h2>
       <Slider {...settings} className={styles.slider}>
         {typesPokemons.map((type, index) => {

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import logo from "../../assets/logo-pokemon.svg";
 import linkedin from "../../assets/linkedin.svg";
 import github from "../../assets/github.svg";
@@ -8,7 +10,9 @@ import styles from "./styles.module.scss";
 const Nav = () => {
   return (
     <nav className={styles.nav}>
-      <img src={logo} alt="logo pokemon" className={styles.logo} />
+      <NavLink to="/">
+        <img src={logo} alt="logo pokemon" className={styles.logo} />
+      </NavLink>
 
       <ul className={styles.social_media}>
         <li>
