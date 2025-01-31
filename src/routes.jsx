@@ -15,7 +15,7 @@ export const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/type",
+        path: "/type/:pokemonType",
         element: <SearchByType />,
       },
       {

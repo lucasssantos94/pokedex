@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import types from "../../assets/utils/types";
 import BadgeType from "../BadgeType";
+import { NavLink } from "react-router-dom";
 
 import styles from "./styles.module.scss";
 import "./customSlide.scss";
@@ -31,9 +32,13 @@ const SlideTypes = () => {
       <Slider {...settings} className={styles.slider}>
         {typesPokemons.map((type, index) => {
           return (
-            <div key={index}>
+            <NavLink
+              to={`/type/${type.label}`}
+              key={index}
+              className={styles.link}
+            >
               <BadgeType type={type.label} />
-            </div>
+            </NavLink>
           );
         })}
       </Slider>
