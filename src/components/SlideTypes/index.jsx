@@ -27,6 +27,14 @@ const SlideTypes = () => {
           arrows: false,
         },
       },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+        },
+      },
     ],
   };
   return (
