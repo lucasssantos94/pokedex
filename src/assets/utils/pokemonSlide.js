@@ -32,7 +32,7 @@ const pokemons = [
   },
   {
     id: 1,
-    name: "Bulbassaur",
+    name: "Bulbasaur",
     description:
       "Bulbassaur é um Pokémon do tipo Planta e Venenoso. Ele é conhecido por ter uma planta em suas costas que cresce à medida que ele evolui. É o Pokémon inicial da região de Kanto.",
     color:

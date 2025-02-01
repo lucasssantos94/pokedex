@@ -9,6 +9,7 @@ const InputSearch = () => {
   const searchPokemon = (e) => {
     e.preventDefault();
     navigate(`/pokemon/${e.target[0].value}`);
+    e.target[0].value = "";
   };
 
   return (
