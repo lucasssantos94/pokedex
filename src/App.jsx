@@ -6,6 +6,7 @@ import "./app.scss";
 import ContainerApp from "@components/ContainerApp";
 import Header from "@components/Header";
 import Navigation from "@components/Navigation";
+import Footer from "@components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <ScrollToTop smooth />
         </ContainerApp>
       </main>
+      <Footer />
     </>
   );
 };

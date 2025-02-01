@@ -1,0 +1,31 @@
+.footer {
+    height: 10vh;
+    border-top: 1px solid #24293F;
+
+    &>div {
+        @include global.flex($justify: space-between, $align: center);
+
+        @include global.media_query('lg') {
+            @include global.flex($direction: column, $gap: 2rem);
+
+        }
+
+        .copy {
+
+            p:not(:last-child) {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        .credits {
+            font-size: 1.4rem;
+
+            a {
+                color: #FF9900;
+            }
+
+        }
+    }
+
+}
