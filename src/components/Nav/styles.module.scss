@@ -1,7 +1,3 @@
 .nav {
     @include global.flex($justify: space-between, $align: center);
-
-    .social_media {
-        @include global.flex($align: center, $gap: 1.6rem);
-    }
 }

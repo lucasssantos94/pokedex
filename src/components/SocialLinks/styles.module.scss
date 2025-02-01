@@ -1,0 +1,3 @@
+.social_links {
+    @include global.flex($align: center, $gap: 1.6rem);
+}
