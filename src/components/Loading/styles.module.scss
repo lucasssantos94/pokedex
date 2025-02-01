@@ -1,0 +1,31 @@
+.loading {
+    width: 100%;
+    height: 40vh;
+    @include global.flex($align: center, $justify: center);
+
+    img {
+        width: 14vw;
+
+        @include global.media_query('lg') {
+            width: 30vw;
+        }
+
+        @include global.media_query('sm') {
+            width: 40vw;
+        }
+
+        animation: rotate 1s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+
+    }
+
+}
