@@ -1,7 +1,7 @@
 .modal {
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.50);
+    background: global.$bg-modal ;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,12 +13,12 @@
         width: 94.8rem;
         height: 35.2rem;
         position: relative;
-        background: rgba(255, 255, 255, 0.25);
+        background: global.$bg-card-modal;
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(13.5px);
         -webkit-backdrop-filter: blur(13.5px);
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
+        border: 1px solid global.$border-card-modal;
         @include global.flex($justify: space-between, $align: center);
 
         .close_modal {
@@ -44,9 +44,7 @@
 
         .container_info {
             padding-top: 8rem;
-            // background-color: red;
             @include global.flex($direction: column, $align: center);
-            color: #fff;
 
             h3 {
                 font-size: 2rem;
@@ -87,7 +85,7 @@
             content: "";
             width: 1px;
             height: 124px;
-            background-color: #ffffff31;
+            background-color: global.$color-divider;
             display: block;
             position: absolute;
             left: 36%;
@@ -107,7 +105,6 @@
     .pokemon_stats {
         width: 58%;
         @include global.flex($direction: column, $gap: 1.6rem);
-        color: #fff;
 
         h2 {
             font-size: 3.2rem;
@@ -132,37 +129,37 @@
                     min-width: calc(100% - 20rem);
                     height: 0.8rem;
                     border-radius: 10px;
-                    background-color: #555555;
+                    background-color: global.$bg-progress;
                     overflow: hidden;
 
                     &.low::-webkit-progress-value {
-                        background-color: red;
+                        background-color: global.$value-progress-low;
                     }
 
                     &.low::-moz-progress-bar {
-                        background-color: red;
+                        background-color: global.$value-progress-low;
                     }
 
                     &.medium::-webkit-progress-value {
-                        background-color: orange;
+                        background-color: global.$value-progress-medium;
                     }
 
                     &.medium::-moz-progress-bar {
-                        background-color: orange;
+                        background-color: global.$value-progress-medium;
                     }
 
                     &.high::-webkit-progress-value {
-                        background-color: green;
+                        background-color: global.$value-progress-high;
                     }
 
                     &.high::-moz-progress-bar {
-                        background-color: green;
+                        background-color: global.$value-progress-high;
                     }
 
                 }
 
                 progress::-webkit-progress-bar {
-                    background-color: #555555;
+                    background-color: global.$bg-progress;
                     border-radius: 10px;
                 }
 
@@ -213,7 +210,6 @@
                 .container_info {
                     padding-top: 12.8rem;
                     @include global.flex($direction: column, $align: center);
-                    color: #fff;
 
                     p {
                         font-size: 2rem;
@@ -281,9 +277,6 @@
 
                         progress {
                             width: 22rem;
-                            height: 0.8rem;
-                            border-radius: 1rem;
-                            background-color: #555555;
                         }
                     }
                 }

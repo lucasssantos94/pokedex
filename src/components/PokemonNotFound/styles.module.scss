@@ -1,6 +1,6 @@
 .card_not_found {
     @include global.flex($align: center, $justify: center, $gap: 1rem);
-    border: 1px solid #24293F;
+    border: 1px solid global.$border-color;
     border-radius: 1rem;
     padding: 1.2rem 1.6rem;
 

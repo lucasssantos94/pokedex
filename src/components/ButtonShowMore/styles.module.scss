@@ -1,12 +1,10 @@
 .btn_show_more {
-    background: linear-gradient(180deg, #151A37 0%, rgba(21, 26, 55, 0.00) 100%);
-    border: 1px solid #24293F;
+    background: global.$bg-gradient;
+    border: 1px solid global.$border-color;
     border-radius: 0.8rem;
-    color: #fff;
-    @include global.flex($align: center, $gap: 0.8rem);
     padding: 1.2rem;
     margin: 4rem auto;
-    cursor: pointer;
+    @include global.flex($align: center, $gap: 0.8rem);
 
     span {
         font-size: 1.6rem;

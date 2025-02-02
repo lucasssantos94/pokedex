@@ -1,3 +1,4 @@
+@use './colors' as color;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -9,7 +10,7 @@
 
 body {
     background-color: #060B28;
-    color: #fff;
+    color: color.$text-color;
 }
 
 body:has(.modal) {
@@ -34,9 +35,15 @@ ul {
 
 a {
     text-decoration: none;
+    color: color.$text-color;
 }
 
 img {
     max-width: 100%;
     display: block;
+}
+
+button {
+    color: color.$text-color;
+    cursor: pointer;
 }

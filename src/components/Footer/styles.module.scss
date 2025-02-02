@@ -1,6 +1,6 @@
 .footer {
     height: 10vh;
-    border-top: 1px solid #24293F;
+    border-top: 1px solid global.$border-color;
 
     &>div {
         @include global.flex($justify: space-between, $align: center);
