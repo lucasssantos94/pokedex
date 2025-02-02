@@ -44,7 +44,7 @@ const SlideTypes = () => {
         <span>Home</span>
       </NavLink>
 
-      <h2 className={styles.title}>Pesquisar por tipos</h2>
+      <h3 className={styles.title}>Pesquisar por tipos</h3>
       <Slider {...settings} className={styles.slider}>
         {typesPokemons.map((type, index) => {
           return (
