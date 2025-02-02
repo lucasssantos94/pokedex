@@ -1,4 +1,4 @@
-import pikachuSad from "../../assets/pikachu-sad.png";
+import pikachuSad from "@images/ui/pikachu-sad.png";
 
 import styles from "./styles.module.scss";
 

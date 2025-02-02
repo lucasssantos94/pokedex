@@ -1,4 +1,4 @@
-import pokeballLoading from "../../assets/pokeball-loading.png";
+import pokeballLoading from "@images/ui/pokeball-loading.png";
 
 import styles from "./styles.module.scss";
 const Loading = () => {

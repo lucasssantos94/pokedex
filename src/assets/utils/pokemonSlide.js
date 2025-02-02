@@ -1,11 +1,12 @@
-import charizard from "./../charizard.webp";
-import pikachu from "./../pikachu.webp";
-import bulbasaur from "./../bulbasaur.webp";
-import squirtle from "./../squirtle.webp";
-import typeFire from "./../typesIcon/fire.svg";
-import typeEletric from "./../typesIcon/electric.svg";
-import typeGrass from "./../typesIcon/grass.svg";
-import typeWater from "./../typesIcon/water.svg";
+import charizard from "../images/pokemonSlide/charizard.webp";
+import pikachu from "../images/pokemonSlide/pikachu.webp";
+import bulbasaur from "../images/pokemonSlide/bulbasaur.webp";
+import squirtle from "../images/pokemonSlide/squirtle.webp";
+
+import typeFire from "../images/typesIcons/fire.svg";
+import typeEletric from "../images/typesIcons/electric.svg";
+import typeGrass from "../images/typesIcons/grass.svg";
+import typeWater from "../images/typesIcons/water.svg";
 
 const pokemons = [
   {

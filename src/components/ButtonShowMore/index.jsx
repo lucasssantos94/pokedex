@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import iconAdd from "../../assets/icon-add.svg";
+import iconAdd from "@images/iconsApp/icon-add.svg";
 
 import styles from "./styles.module.scss";
 

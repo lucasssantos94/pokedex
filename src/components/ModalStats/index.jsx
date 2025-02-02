@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { motion, AnimatePresence } from "framer-motion";
 
-import iconClose from "../../assets/icon-close.svg";
-import pokeballDiveser from "../../assets/pokeball-diviser.svg";
-import iconWeight from "../../assets/icon-weight.svg";
-import iconHeight from "../../assets/icon-ruler.svg";
+import BadgeType from "@components/BadgeType";
+
+import iconClose from "@images/iconsApp/icon-close.svg";
+import iconWeight from "@images/iconsApp/icon-weight.svg";
+import iconHeight from "@images/iconsApp/icon-ruler.svg";
+import pokeballDiveser from "@images/ui/pokeball-diviser.svg";
 
 import styles from "./styles.module.scss";
-import BadgeType from "../BadgeType";
 
 const ModalStats = ({ modal, selectedPokemon }) => {
   const [progressValues, setProgressValues] = useState([]);

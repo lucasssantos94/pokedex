@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-import BadgeType from "../BadgeType";
+import BadgeType from "@components/BadgeType";
+import types from "@assets/utils/types";
+
+import iconWeight from "@images/iconsApp/icon-weight.svg";
+import iconHeight from "@images/iconsApp/icon-ruler.svg";
+import iconBolt from "@images/iconsApp/icon-bolt.svg";
 
 import styles from "./styles.module.scss";
-import types from "../../assets/utils/types";
-
-import iconWeight from "../../assets/icon-weight.svg";
-import iconHeight from "../../assets/icon-ruler.svg";
-import iconBolt from "../../assets/icon-bolt.svg";
 
 const CardPokemon = ({ pokemon, modal, selectedPokemon }) => {
   const handleClick = () => {

@@ -1,6 +1,6 @@
-import linkedin from "@assets/linkedin.svg";
-import github from "@assets/github.svg";
-import telegram from "@assets/telegram.svg";
+import linkedin from "@images/iconsApp/icon-linkedin.svg";
+import github from "@images/iconsApp/icon-github.svg";
+import telegram from "@images/iconsApp/icon-telegram.svg";
 
 import styles from "./styles.module.scss";
 

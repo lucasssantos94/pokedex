@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import bgPokeball from "../../assets/background-pokeball.svg";
-import ContainerApp from "../ContainerApp";
-import pokemons from "../../assets/utils/pokemonSlide";
-import Nav from "../Nav";
+
+import ContainerApp from "@components/ContainerApp";
+import Nav from "@components/Nav";
+import BadgeType from "@components/BadgeType";
+
+import pokemons from "@assets/utils/pokemonSlide";
+import bgPokeball from "@images/ui/background-pokeball.svg";
 
 import styles from "./styles.module.scss";
-import BadgeType from "../BadgeType";
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,8 +18,8 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(changeSlide, 15000); // Troca a cada 10 segundos
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    const interval = setInterval(changeSlide, 15000);
+    return () => clearInterval(interval);
   }, []);
 
   const pokemonSlide = pokemons[currentIndex];

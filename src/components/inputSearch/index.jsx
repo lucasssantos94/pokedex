@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
-import iconSearch from "../../assets/icon-search.svg";
+import iconSearch from "@images/iconsApp/icon-search.svg";
+
 import styles from "./styles.module.scss";
 
 const InputSearch = () => {

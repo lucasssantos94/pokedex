@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 
 import Slider from "react-slick";
-import types from "../../assets/utils/types";
-import BadgeType from "../BadgeType";
+import types from "@assets/utils/types";
+import BadgeType from "@components/BadgeType";
 
-import iconHome from "@assets/icon-home.svg";
+import iconHome from "@images/iconsApp/icon-home.svg";
 
 import styles from "./styles.module.scss";
 import "./customSlide.scss";

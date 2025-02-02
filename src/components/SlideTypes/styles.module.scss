@@ -14,9 +14,10 @@
 .link_home {
     width: 11rem;
     height: 4.8rem;
-    font-size: 1.6rem;
     border: 1px solid global.$text-color;
     border-radius: 0.8rem;
-    @include global.flex($align: center, $justify: center, $gap: 0.8rem);
     margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+    background: global.$bg-gradient;
+    @include global.flex($align: center, $justify: center, $gap: 0.8rem);
 }
